@@ -1,0 +1,28 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.header .alert.alert-error {
+    background: #fd4d4d;
+    position: absolute;
+    top: 26px;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 10px;
+    animation: fadeout 3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

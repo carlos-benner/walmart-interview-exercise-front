@@ -1,7 +1,6 @@
 import NumberFormat from 'react-number-format';
 
 const Product = ({ product }) => {
-    console.log(product.image);
     return (
         <li className='product'>
             {product.discount && (
