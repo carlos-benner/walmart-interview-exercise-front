@@ -21,16 +21,14 @@ function App() {
 
     function onSearchSubmit(ev, query) {
         ev.preventDefault();
-        setProductList(productsArray);
-        console.log(productList);
-        //axios(`/api/product/${query}`)
-        //   .then((result) => {
-        //       setProductList(result);
-        //       console.log(productList);
-        //   })
-        //   .catch((err) => {
-        //       console.log(err);
-        //   });
+        axios
+            .get(`/api/product/${query}`)
+            .then((result) => {
+                setProductList(result);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     }
     return (
         <div className='App'>
