@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const productRouter = require('./routes/products');
 const indexRouter = require('./routes/index');
-
+require('dotenv').config();
 const clientPath = 'app/build';
 
 const app = express();
